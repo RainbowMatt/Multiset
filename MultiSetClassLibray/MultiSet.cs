@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MultiSetClassLibray
@@ -32,13 +33,13 @@ namespace MultiSetClassLibray
 
         public void Add(T item)=>this.Add(item, 1);
 
-        public bool IsEmpty => throw new NotImplementedException();
+        public bool IsEmpty => mset.Count == 0;
 
         public IEqualityComparer<T> Comparer => throw new NotImplementedException();
 
-        public int Count => throw new NotImplementedException();
+        public int Count => mset.Values.Sum();
 
-        public bool IsReadOnly => throw new NotImplementedException();
+        public bool IsReadOnly => false;
 
         
 
